@@ -1,0 +1,42 @@
+<po-page-default p-title="Home">
+  <form>
+    <po-input
+      name="input"
+      [(ngModel)]="input"
+      [p-clean]="properties?.includes('clean')"
+      [p-disabled]="properties?.includes('disabled')"
+      [p-error-pattern]="errorPattern"
+      [p-help]="help"
+      [p-icon]="icon"
+      [p-label]="label"
+      [p-mask]="mask"
+      [p-mask-format-model]="properties?.includes('maskFormatModel')"
+      [p-maxlength]="maxlength"
+      [p-minlength]="minlength"
+      [p-no-autocomplete]="properties?.includes('noAutocomplete')"
+      [p-optional]="properties?.includes('optional')"
+      [p-pattern]="pattern"
+      [p-placeholder]="placeholder"
+      [p-required]="properties?.includes('required')"
+      [p-readonly]="properties?.includes('readonly')"
+      (p-blur)="changeEvent('p-blur')"
+      (p-change)="changeEvent('p-change')"
+      (p-change-model)="changeEvent('p-change-model')"
+      (p-enter)="changeEvent('p-enter')"
+    >
+    </po-input>
+    <div class="po-row">
+      <po-button p-label="Consultar" (p-click)="onClickButton()"> </po-button>
+    </div>
+    <hr />
+    <div class="po-row">
+      <po-grid
+        class="po-md-12"
+        [p-row-actions]="rowActions"
+        [p-data]="data"
+        [p-columns]="columns"
+      >
+      </po-grid>
+    </div>
+  </form>
+</po-page-default>
